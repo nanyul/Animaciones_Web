@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             start: "top bottom",
             end: "bottom bottom",
             scrub: 1,
-            
+
         },
         y: "110%",
         x: "-25%",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         immediateRender: false,
     });
 
-        
+
     gsap.to("#robot", {
         scrollTrigger: {
             trigger: "#seccion3",
@@ -32,8 +32,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
             end: "center center",
             scrub: 1,
         },
-        y: "210%",
+        y: "215%",
         x: "2%",
+        ease: "power1.inOut",
+        immediateRender: false,
+    });
+
+
+
+
+    gsap.to("#robot", {
+        scrollTrigger: {
+            trigger: "#seccion5",
+            start: "top bottom",
+            end: "center center",
+            scrub: 1,
+            
+        },
+        y: "420%",
+        x: "37%",
         ease: "power1.inOut",
         immediateRender: false,
     });

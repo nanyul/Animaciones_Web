@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberAnimation</title>
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.99/build/spline-viewer.js"></script>
+    <!-- estilos css -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- header -->
+            <header>
+                <div class="logo"> Cyber<span>Animation</span> </div>
+                <ul class="menu">
+                    <li><a href="index.html">Fundamentos</a></li>
+                    <li><a href="#services">Animación UI</a></li>
+                    <li><a href="index.html"class="btn">CSS Animado</a></li>
+                    <li><a href="jsanimado.html">JS Animado</a></li>
+                </ul>
+            </header>
+
+            <!-- hero seccion -->
+            <section class="hero-section" id="home">
+                <h1 id="hero-text">Animaciones CSS</h1>
+                <spline-viewer id="robot"
+                    url="https://prod.spline.design/Ptx9m1kzUDVVUmy3/scene.splinecode"></spline-viewer>
+            </section>
+
+            <section class="meet-seccion" id="seccion2">
+                <div class="content-wrapper">
+                    <div class="left">
+                        <h2>¿En qué consiste?</h2>
+                    </div>
+                    <div class="right">
+                        <p>
+                            CSS proporciona un modelo declarativo para definir animaciones, es decir, el desarrollador
+                            describe qué debe suceder y el navegador se encarga de ejecutarlo. Las animaciones en CSS
+                            utilizan la regla @keyframes para definir los estados intermedios del movimiento.
+                        </p>
+
+                        <h3>Ejemplo de uso de <code>@keyframes</code></h3>
+                        <pre class="ejemplo-cod"><code>@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rueda {
+    animation-name: girar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+</code></pre>
+
+                        <p>En este caso, el elemento con clase <code>.rueda</code> gira constantemente sobre su eje,
+                            repitiendo el ciclo indefinidamente.</p>
+
+                    </div>
+                    <!-- rueda -->
+                    <div class="rueda" aria-hidden="true"></div>
+                    <div class="triangulo"></div>
+                    <div class="triangulo triengulo2"></div>
+                </div>
+            </section>
+
+            <section class="cta" id="seccion3">
+                <img src="./img/platform.png" alt="plataforma del robot">
+                <h2>A continuación, las propiedades clave de la animación</h2>
+            </section>
+
+            <section class="seccion-propiedades" id="seccion4">
+                <div class="props-wrapper">
+                    <h2>Propiedades Clave de la Animación</h2>
+                    <div class="props-grid">
+                        <article class="prop-card">
+                            <div class="prop-demo demo-name" aria-hidden="true"></div>
+                            <h3>animation-name</h3>
+                            <p>Nombre de la animación definida con <code>@keyframes</code>.</p>
+                        </article>
+                        <article class="prop-card">
+                            <div class="prop-demo demo-duration" aria-hidden="true"></div>
+                            <h3>animation-duration</h3>
+                            <p>Tiempo total de ejecución.</p>
+                        </article>
+                        <article class="prop-card">
+                            <div class="prop-demo demo-timing" aria-hidden="true"></div>
+                            <h3>animation-timing-function</h3>
+                            <p>Define la curva de velocidad del movimiento.</p>
+                        </article>
+                        <article class="prop-card">
+                            <div class="prop-demo demo-delay" aria-hidden="true"></div>
+                            <h3>animation-delay</h3>
+                            <p>Tiempo antes de comenzar.</p>
+                        </article>
+                        <article class="prop-card">
+                            <div class="prop-demo demo-iteration" aria-hidden="true"></div>
+                            <h3>animation-iteration-count</h3>
+                            <p>Número de repeticiones.</p>
+                        </article>
+                        <article class="prop-card">
+                            <div class="prop-demo demo-direction" aria-hidden="true"></div>
+                            <h3>animation-direction</h3>
+                            <p>Sentido de reproducción (normal, reverse, alternate).</p>
+                        </article>
+                        <article class="prop-card">
+                            <div class="prop-demo demo-fill" aria-hidden="true"></div>
+                            <h3>animation-fill-mode</h3>
+                            <p>Estado al inicio/final (none, forwards, backwards, both).</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="transiciones-seccion" id="seccion5">
+                <div class="content-wrapper">
+                    <div class="left">
+                        <h2>Transiciones</h2>
+                    </div>
+                    <div class="right">
+                        <p>
+                            Las transiciones son animaciones más simples, que se activan al producirse un evento
+                            (como <code>hover</code> o <code>focus</code>).
+                        </p>
+
+                        <h3>Ejemplo</h3>
+                        <pre class="ejemplo-cod"><code>button {
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+</code></pre>
+
+                        <p>
+                            En este caso, el botón cambia suavemente de color al pasar el cursor por encima, lo que
+                            genera una sensación de respuesta inmediata.
+                        </p>
+                    </div>
+
+                    <!-- columna derecha: demo interactiva (botón) -->
+                    <div class="robot-slot">
+                        <button class="cute-btn" aria-label="Botón de ejemplo">Pasa el cursor</button>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <!-- script js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
