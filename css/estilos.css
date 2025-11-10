@@ -168,7 +168,7 @@ header .logo span {
     overflow: hidden;
 }
 
-    
+
 .meet-seccion::after {
     content: '';
     position: absolute;
@@ -176,7 +176,8 @@ header .logo span {
     top: -20%;
     width: 50%;
     height: 140%;
-    background: radial-gradient(#E75C84, #8C144E);/* efecto rayo degradado */
+    background: radial-gradient(#E75C84, #8C144E);
+    /* efecto rayo degradado */
     transform: rotate(18deg);
     filter: blur(40px);
     opacity: 0.25;
@@ -767,3 +768,4 @@ header .logo span {
         margin-top: 1rem;
     }
 }
+

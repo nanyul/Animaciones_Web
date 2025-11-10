@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.99/build/spline-viewer.js"></script>
+
     <!-- css -->
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/jsanimado.css">
@@ -50,26 +51,91 @@
         </p>
         <h3>Instalación: </h3>
         <h2>Puede integrarse mediante CDN o NPM:</h2>
-        <pre class="ejemplo-cod"><code>&lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"&gt;&lt;/script&gt;</code></pre>
+        <pre
+            class="ejemplo-cod"><code>&lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"&gt;&lt;/script&gt;</code></pre>
         <h3>Ejemplo</h3>
         <pre class="ejemplo-cod"><code>gsap.to('.caja', { duration: 2, x: 200, rotation: 360, ease: 'bounce' }); 
 </code></pre>
-<h3>En este ejemplo, el elemento con clase .caja se desplaza 200 píxeles hacia la derecha, rota 360 grados y aplica un efecto de rebote (ease: 'bounce'). </h3>
+        <h3>En este ejemplo, el elemento con clase .caja se desplaza 200 píxeles hacia la derecha, rota 360 grados y
+            aplica un efecto de rebote (ease: 'bounce'). </h3>
     </section>
 
-     <section class="configuracion" id="seccion-configuracion">
+    <section class="configuracion" id="seccion-configuracion">
         <h2>Aspectos de Configuración</h2>
         <p>
-            Para desarrollar animaciones web, se recomienda contar con: 
+            Para desarrollar animaciones web, se recomienda contar con:
         </p>
         <ul>
             <li>Editor de código: Visual Studio Code o Sublime Text. </li>
             <li>Navegador moderno: Google Chrome o Firefox. </li>
             <li>Extensiones o librerías: GSAP, Animate.css o frameworks similares. </li>
-            <li>Entorno de pruebas: Uso de servidores locales (Live Server) o plataformas interactivas como CodePen y JSFiddle. </li>
+            <li>Entorno de pruebas: Uso de servidores locales (Live Server) o plataformas interactivas como CodePen y
+                JSFiddle. </li>
         </ul>
-        <p>Estos entornos permiten probar y ajustar las animaciones en tiempo real, optimizando su comportamiento visual y de rendimiento. </p>
+        <p>Estos entornos permiten probar y ajustar las animaciones en tiempo real, optimizando su comportamiento visual
+            y de rendimiento. </p>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Diseño e Implementación de Páginas Web</h3>
+                <p><strong>Exposición:</strong> Animaciones Web con CSS y JavaScript</p>
+                <p><strong>Presentado por:</strong> <br> Keylin Rojas Obando <br> Nancy Yuliana Araya Norori <br> Axel
+                    Alejandro Orozco Guzmán <br> Mónica Pamela Gutiérrez Borge</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Referencias</h4>
+                <ul>
+                    <li><a href="https://profile.es/blog/los-10-principios-de-usabilidad-web-de-jakob-nielsen/"
+                            target="_blank">PROFILE</a></li>
+                    <li><a href="https://www.unir.net/revista/marketing-comunicacion/que-es-usabilidad-web/"
+                            target="_blank">UNIR</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 | Proyecto académico - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- GSAP  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            try {
+                // animate section headings
+                gsap.from('#seccion-ventajas h2, #seccion-libreria h2, #seccion-configuracion h2', {
+                    y: 26,
+                    opacity: 0,
+                    duration: 0.85,
+                    ease: 'power3.out',
+                    stagger: 0.12
+                });
+
+                // animate paragraphs with a slight overlap
+                gsap.from('#seccion-ventajas p, #seccion-libreria p, #seccion-configuracion p', {
+                    y: 12,
+                    opacity: 0,
+                    duration: 0.7,
+                    ease: 'power2.out',
+                    stagger: 0.08,
+                    delay: 0.12
+                });
+
+                // subtle scale-in for code examples
+                gsap.from('pre.ejemplo-cod', { scale: 0.985, opacity: 0, duration: 0.8, ease: 'power2.out', stagger: 0.14, delay: 0.18 });
+            } catch (e) {
+                // graceful fallback if GSAP is blocked
+                console.warn('GSAP init error:', e);
+            }
+        });
+    </script>
+
+
 </body>
 
 </html>

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             end: "center center",
             scrub: 1,
         },
-        y: "215%",
+        y: "216.5%",
         x: "2%",
         ease: "power1.inOut",
         immediateRender: false,
@@ -54,5 +54,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ease: "power1.inOut",
         immediateRender: false,
     });
-
+    
 });
+    

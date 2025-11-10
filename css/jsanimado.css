@@ -115,3 +115,112 @@ section.configuracion ul li code{
   .caja { width: 100px; height: 64px; }
   section.ventajas h2, section.libreria h2, section.configuracion h2 { font-size: 1.25rem; }
 }
+
+/*footer*/
+footer.footer {
+    background: linear-gradient(180deg, rgba(18, 8, 18, 0.98), rgba(47, 12, 51, 0.98));
+    padding: 48px 5rem 24px;
+    color: #fff;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2.4rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.footer-info h3 {
+    font-family: var(--heading-font);
+    color: var(--c-gold);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.footer-info p {
+    color: #FFFFFF;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+.footer-links {
+    flex: 0 0 260px;
+}
+
+.footer-links h4 {
+    color: var(--c-gold);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-left: 8px;
+    border-left: 3px solid transparent;
+    transition: all 180ms ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--brandcolor);
+    transform: translateX(6px);
+    border-left-color: var(--brandcolor);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 18px auto 0 auto;
+    padding-top: 18px;
+    border-top: 1px solid #000;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+    footer.footer {
+        padding: 36px 2.2rem 18px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer-links ul {
+        align-items: center;
+    }
+
+    .footer-info {
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    footer.footer {
+        padding: 28px 1rem 14px;
+    }
+
+    .footer-info h3 {
+        font-size: 1.05rem;
+    }
+}
