@@ -62,7 +62,7 @@ header {
 }
 
 .menu a {
-    color: rgba(255, 255, 255, 0.9);
+    color: #FFFFFF;
     text-decoration: none;
     padding: 0.35rem 0.65rem;
     border-radius: 6px;
@@ -106,7 +106,7 @@ header .logo span {
 }
 
 .menu a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -154,32 +154,29 @@ header .logo span {
     z-index: 9;
 }
 
-/* Sección: ¿Qué es? — diseño mejorado, responsivo y animado */
+/* Sección: ¿Qué es?*/
 .meet-seccion {
-    /* layout */
     min-height: 70vh;
     padding: 6rem 5rem;
     display: flex;
     align-items: center;
     position: relative;
-
-    /* visual */
-    background: linear-gradient(135deg, rgba(251, 176, 64, 1) 0%, rgba(238, 144, 41, 0.95) 45%);
+    background: linear-gradient(135deg, #FBB040, #EE9029);
     color: #1b0220;
     border-radius: 60px 60px 0 0;
     box-shadow: 0 20px 50px #2F0C33;
     overflow: hidden;
 }
 
+    
 .meet-seccion::after {
-    /* elemento decorativo sutil */
     content: '';
     position: absolute;
     right: -10%;
     top: -20%;
     width: 50%;
     height: 140%;
-    background: radial-gradient(circle at 30% 30%, #E75C84, #8C144E);
+    background: radial-gradient(#E75C84, #8C144E);/* efecto rayo degradado */
     transform: rotate(18deg);
     filter: blur(40px);
     opacity: 0.25;
@@ -212,7 +209,7 @@ header .logo span {
 
 .meet-seccion h2 {
     font-family: var(--heading-font);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: 2.7rem;
     margin-bottom: 0.75rem;
     color: #1b0220;
     line-height: 1.05;
@@ -232,45 +229,16 @@ header .logo span {
     animation: fadeInUp 900ms ease both;
 }
 
-.key-points ul {
-    list-style: none;
-    padding: 0;
-    margin: 0.75rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.key-points li {
-    font-weight: 700;
-    color: #1b0220;
-    padding-left: 30px;
-    position: relative;
-}
-
-.key-points li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: conic-gradient(from 120deg, #FBB040, #E75C84);
-    box-shadow: 0 6px 14px #2F0C33;
-}
-
 .triangulo {
     width: 0;
     height: 0;
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
-    border-bottom: 173px solid #FBB040;
+    border-bottom: 173px solid #E75C84;
     scale: 0.8;
     position: absolute;
     bottom: 25%;
-    left: 12%;
+    left: 6%;
     animation: rotate 6s linear infinite;
 }
 
@@ -306,7 +274,7 @@ header .logo span {
     right: 10%;
 }
 
-/* Rueda decorativa: usa @keyframes girar (gira continuamente) */
+/* Rueda decorativa*/
 @keyframes girar {
     from {
         transform: rotate(0deg);
@@ -326,7 +294,7 @@ header .logo span {
     height: 99px;
     border-radius: 50%;
     background: conic-gradient(from 180deg, var(--c-gold), var(--c-pink), var(--c-magenta));
-    box-shadow: 0 10px 30px rgba(11, 6, 18, 0.45), inset 0 6px 18px rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 6px 18px #2F0C33;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +310,7 @@ header .logo span {
     height: 44%;
     border-radius: 50%;
     background: #2F0C33;
-    box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.03);
+    box-shadow: inset 0 3px 8px #2F0C33;
 }
 
 @media (max-width: 900px) {
@@ -363,7 +331,7 @@ header .logo span {
 /* Sección: tarjetas de propiedades de animación */
 .seccion-propiedades {
     padding: 4rem 5rem;
-    background: linear-gradient(180deg, rgba(140, 20, 78, 0.04), rgba(140, 20, 78, 0.02));
+    background: #2F0C33;
 }
 
 .seccion-propiedades .props-wrapper {
@@ -385,8 +353,8 @@ header .logo span {
 }
 
 .prop-card {
-    background: linear-gradient(180deg, rgba(20, 8, 28, 0.9), rgba(24, 10, 36, 0.85));
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: linear-gradient(180deg, #1b0220, #2F0C33);
+    border: 1px solid #1b0220;
     padding: 1.15rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(11, 6, 18, 0.6);
@@ -399,7 +367,7 @@ header .logo span {
 }
 
 .prop-card p {
-    color: rgba(255, 255, 255, 0.85);
+    color: #ffffff;
     margin: 0;
     font-size: 0.95rem;
 }
@@ -416,7 +384,6 @@ header .logo span {
     }
 }
 
-/* Mini demos inside each prop-card */
 .prop-demo {
     width: 64px;
     height: 40px;
@@ -425,9 +392,8 @@ header .logo span {
     position: relative;
 }
 
-/* 1) animation-name: sliding name label */
 .demo-name {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    background: #2F0C33;
     border-radius: 999px;
     overflow: hidden;
 }
@@ -456,9 +422,9 @@ header .logo span {
     }
 }
 
-/* 2) animation-duration: progress bar that fills in 3s */
+/* animation-duration*/
 .demo-duration {
-    background: rgba(255, 255, 255, 0.04);
+    background: #2F0C33;
     border-radius: 6px;
 }
 
@@ -485,9 +451,9 @@ header .logo span {
     }
 }
 
-/* 3) animation-timing-function: dot moving with ease-in-out */
+/* animation-timing-function*/
 .demo-timing {
-    background: rgba(255, 255, 255, 0.04);
+    background: #2F0C33;
     border-radius: 6px;
 }
 
@@ -518,9 +484,9 @@ header .logo span {
     }
 }
 
-/* 4) animation-delay: dot appears after delay */
+/* animation-delay*/
 .demo-delay {
-    background: rgba(255, 255, 255, 0.02);
+    background: #2F0C33;
     border-radius: 6px;
 }
 
@@ -554,9 +520,9 @@ header .logo span {
     }
 }
 
-/* 5) animation-iteration-count: animates 3 times then stops */
+/* animation-iteration-count*/
 .demo-iteration {
-    background: rgba(255, 255, 255, 0.03);
+    background: #2F0C33;
     border-radius: 6px;
 }
 
@@ -590,9 +556,9 @@ header .logo span {
     }
 }
 
-/* 6) animation-direction: alternating motion */
+/*animation-direction*/
 .demo-direction {
-    background: rgba(255, 255, 255, 0.04);
+    background: #2F0C33;
     border-radius: 6px;
 }
 
@@ -619,9 +585,9 @@ header .logo span {
     }
 }
 
-/* 7) animation-fill-mode: moves up and stays (forwards) */
+/*animation-fill-mode*/
 .demo-fill {
-    background: rgba(255, 255, 255, 0.02);
+    background: #2F0C33;
     border-radius: 6px;
 }
 
@@ -692,7 +658,7 @@ header .logo span {
     background: linear-gradient(180deg, #8C144E, #2F0C33);
     border-radius: 20px;
     margin: 30px;
-    color: rgba(255, 255, 255, 0.95);
+    color: #ffffff;
     overflow: hidden;
 }
 
@@ -701,6 +667,7 @@ header .logo span {
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 360px;
+
     /* columna derecha reservada para el robot */
     gap: 2rem;
     align-items: start;
@@ -715,25 +682,25 @@ header .logo span {
 .transiciones-seccion h2 {
     font-family: var(--heading-font);
     color: var(--c-gold);
-    font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+    font-size: 2.7rem;
     margin-bottom: 0.6rem;
 }
 
 .transiciones-seccion p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
     line-height: 1.7;
 }
 
 .transiciones-seccion pre.ejemplo-cod {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35));
+    background: #2F0C33;
     border-left: 4px solid var(--c-gold);
     padding: 1rem;
     border-radius: 10px;
-    color: #fff;
+    color: #ffffff;
     overflow: auto;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
     font-size: 0.95rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 24px #2F0C33;
 }
 
 /* Boton ejemplo*/
@@ -755,7 +722,7 @@ header .logo span {
     padding: 0.9rem 1.2rem;
     font: 700 1rem var(--body-font);
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 18px #2F0C33;
     transition: all 0.25s ease;
     animation: floatBtn 1s ease-in-out infinite;
 }
@@ -763,7 +730,7 @@ header .logo span {
 .cute-btn:hover {
     background: #E75C84;
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 14px 28px #2F0C33;
     animation-play-state: paused;
 }
 
