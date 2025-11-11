@@ -277,7 +277,7 @@ footer.footer {
   }
 
   .nav .link {
-    color: #fff; /* asegúrate que se vea */
+    color: #fff; 
     font-size: 1.1rem;
     text-decoration: none;
     font-family: var(--body-font);
