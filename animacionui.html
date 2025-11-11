@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="CSS/jsanimado.css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
@@ -18,12 +19,19 @@
     <!-- Header -->
     <header>
         <div class="logo">Cyber<span>Animation</span></div>
-        <ul class="menu">
-            <li><a href="index.html">CSS Animado</a></li>
-            <li><a href="fundamentos.html">Fundamentos</a></li>
-            <li><a href="animacionui.html" class="btn">Animación UI</a></li>
-            <li><a href="jsanimado.html">JS Animado</a></li>
-        </ul>
+                
+        <!-- Botón del menú hamburguesa -->
+        <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span class="material-icons">menu</span>
+        </button>
+                
+        <!-- Navegación principal -->
+        <nav class="nav" id="main-nav">
+            <a href="index.html" class="link">CSS Animado</a>
+            <a href="fundamentos.html" class="link">Fundamentos</a>
+            <a href="animacionui.html" class="link active">Animación UI</a>
+            <a href="jsanimado.html" class="link">JS Animado</a>
+        </nav>
     </header>
 
     <section class="principios-section" id="animacion-ui">
@@ -168,6 +176,8 @@
     </div>
 
     <script src="js/animaciones.js"></script>
+    <script src="js/main.js"></script>
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">

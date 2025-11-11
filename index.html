@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.99/build/spline-viewer.js"></script>
     <!-- estilos css -->
     <link rel="stylesheet" href="css/estilos.css">
@@ -23,13 +24,20 @@
 
             <!-- header -->
             <header>
-                <div class="logo"> Cyber<span>Animation</span> </div>
-                <ul class="menu">
-                    <li><a href="index.html" class="btn">CSS Animado</a></li>
-                    <li><a href="fundamentos.html">Fundamentos</a></li>
-                    <li><a href="animacionui.html">Animación UI</a></li>
-                    <li><a href="jsanimado.html">JS Animado</a></li>
-                </ul>
+                <div class="logo">Cyber<span>Animation</span></div>
+                
+                <!-- Botón del menú hamburguesa -->
+                <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="material-icons">menu</span>
+                </button>
+                
+                <!-- Navegación principal -->
+                <nav class="nav" id="main-nav">
+                    <a href="index.html" class="link active">CSS Animado</a>
+                    <a href="fundamentos.html" class="link">Fundamentos</a>
+                    <a href="animacionui.html" class="link">Animación UI</a>
+                    <a href="jsanimado.html" class="link">JS Animado</a>
+                </nav>
             </header>
 
             <!-- hero seccion -->

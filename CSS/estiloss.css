@@ -33,100 +33,60 @@ body{
     
 }   
 
-/* Header */
-header{
+/* ====== HEADER GENERAL ====== */
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    background: linear-gradient(90deg, rgba(140,20,78,0.06), transparent);
+    padding: 1.2rem 3rem;
+    background: linear-gradient(90deg, #2F0C33, transparent);
+    position: relative;
+    z-index: 1000;
 }
 
-.logo{
+/* ====== LOGO ====== */
+.logo {
     font-family: var(--heading-font);
     color: var(--c-gold);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
 }
 
-.logo span{
+.logo span {
     color: var(--c-pink);
     margin-left: 6px;
     font-weight: 700;
 }
 
-.menu{
-    list-style: none;
+/* ====== NAVEGACIÓN ====== */
+.nav {
     display: flex;
-    gap: 0.8rem;
-    align-items: center;
+    gap: 2rem;
 }
 
-.menu a{
-    color: rgba(255,255,255,0.9);
+.nav .link {
+    color: #fff;
     text-decoration: none;
-    padding: 0.35rem 0.65rem;
-    border-radius: 6px;
-    transition: all 180ms ease;
     font-family: var(--body-font);
+    transition: all 0.3s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
 }
 
-.menu a.btn{
+.nav .link:hover,
+.nav .link.active {
+    background: linear-gradient(90deg, var(--c-pink), var(--c-magenta));
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ====== BOTÓN ESPECIAL (CSS Animado) ====== */
+.link.active {
     background: linear-gradient(90deg, var(--c-orange), var(--c-gold));
     color: #1b0220;
     font-weight: 600;
 }
-
-.menu a:hover{
-    background: linear-gradient(90deg, var(--c-pink), var(--c-magenta));
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(199,27,89,0.14);
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 5rem;
-}
-
-header .logo{
-    font-family: var(--heading-font);
-    font-size: 2rem;
-}
-
-header .logo span{
-    color: #E75C84;
-}
-
-.menu{
-    list-style: none;
-    display: flex;
-    gap: 3rem;
-}
-
-.menu a {
-color: white;
-text-decoration: none;
-transition: color 0.3s ease;
-}
-
-.menu a:hover {
-color: var(--brandcolor);
-}
-
-.btn{
-    background-color: var(--brandcolor);
-    padding: 0.7rem 1.5rem;
-    border-radius: 50px;
-
-}
-
-.btn:hover {
-    background-color: darken(var(--brandcolor), 10%);
-}
-
 
 
 section.fundamentos {
@@ -205,6 +165,45 @@ p,
 li {
     color: #FFFFFF;
     line-height: 1.6;
+}
+
+/* Contenedores de las demos */
+#duration-demo,
+#delay-demo,
+#easing-demo {
+    position: relative;
+    overflow: hidden; /* evita que se salgan al moverse */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* espacio entre cajas */
+    padding: 1rem 0;
+}
+
+/* Ajuste de tamaño base */
+.demo-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #E75C84, #FBB040);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .demo-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    #duration-demo,
+    #delay-demo,
+    #easing-demo {
+        gap: 1rem;
+        padding: 1rem 0;
+        overflow-x: hidden;
+        overflow-y: visible; 
+    }
 }
 
 /* ==== Robotcito flotante ==== */
@@ -288,6 +287,37 @@ li {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 }
+
+/* ==== Responsive del robotcito ==== */
+@media (max-width: 768px) {
+    #robot {
+        right: 30px;   /* más cerca del borde derecho */
+        bottom: 30px;  /* más arriba para no tapar texto */
+        width: 55px;   /* un poco más pequeño */
+        height: 70px;
+    }
+
+    #robot .head {
+        width: 40px;
+        height: 35px;
+    }
+
+    .body {
+        width: 32px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    #robot {
+        right: 20px;
+        bottom: 20px;
+        width: 45px;
+        height: 60px;
+    }
+}
+
+
 /* AnimacionUI */
 .demo-card {
     background: rgba(255, 255, 255, 0.05);

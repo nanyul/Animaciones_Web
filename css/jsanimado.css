@@ -236,3 +236,59 @@ footer.footer {
     font-size: 1.05rem;
   }
 }
+
+
+
+/* ====== Botón hamburguesa ====== */
+#menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  display: none; /* Oculto en pantallas grandes */
+}
+
+/* ====== Modo Responsive ====== */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+    z-index: 1100;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(47, 12, 51, 0.98);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    backdrop-filter: blur(10px);
+    display: none;
+    transition: all 0.4s ease;
+    z-index: 1000;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav .link {
+    color: #fff; /* asegúrate que se vea */
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-family: var(--body-font);
+    background: transparent;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav .link:hover {
+    background: linear-gradient(90deg, var(--c-pink), var(--c-magenta));
+    transform: scale(1.05);
+  }
+}
