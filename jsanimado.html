@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.99/build/spline-viewer.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/jsanimado.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo"> Cyber<span>Animation</span> </div>
+        <ul class="menu">
+            <li><a href="index.html">Fundamentos</a></li>
+            <li><a href="#services">Animación UI</a></li>
+            <li><a href="animadocss.html">CSS Animado</a></li>
+            <li><a href="jsanimado.html" class="btn">JS Animado</a></li>
+        </ul>
+    </header>
+
+    <section class="ventajas" id="seccion-ventajas">
+        <h2>Ventajas del uso de JavaScript </h2>
+        <p>
+            Aunque CSS cubre gran parte de las necesidades visuales, JavaScript permite crear animaciones
+            interactivas, controladas y dinámicas, útiles cuando las animaciones dependen de datos, eventos o
+            condiciones en tiempo real.
+
+            Por ejemplo, al arrastrar elementos, sincronizar movimientos con música o controlar animaciones con
+            desplazamiento (scroll animations).
+        </p>
+    </section>
+
+    <section class="libreria" id="seccion-libreria">
+        <h2>Librería GSAP (GreenSock Animation Platform)</h2>
+        <p>
+            GSAP es una de las librerías más populares para crear animaciones en la web.
+            Ofrece un control total sobre los elementos, tiempos, secuencias y efectos, con un rendimiento altamente
+            optimizado.
+        </p>
+        <h3>Instalación: </h3>
+        <h2>Puede integrarse mediante CDN o NPM:</h2>
+        <pre
+            class="ejemplo-cod"><code>&lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"&gt;&lt;/script&gt;</code></pre>
+        <h3>Ejemplo</h3>
+        <pre class="ejemplo-cod"><code>gsap.to('.caja', { duration: 2, x: 200, rotation: 360, ease: 'bounce' }); 
+</code></pre>
+        <h3>En este ejemplo, el elemento con clase .caja se desplaza 200 píxeles hacia la derecha, rota 360 grados y
+            aplica un efecto de rebote (ease: 'bounce'). </h3>
+    </section>
+
+    <section class="configuracion" id="seccion-configuracion">
+        <h2>Aspectos de Configuración</h2>
+        <p>
+            Para desarrollar animaciones web, se recomienda contar con:
+        </p>
+        <ul>
+            <li>Editor de código: Visual Studio Code o Sublime Text. </li>
+            <li>Navegador moderno: Google Chrome o Firefox. </li>
+            <li>Extensiones o librerías: GSAP, Animate.css o frameworks similares. </li>
+            <li>Entorno de pruebas: Uso de servidores locales (Live Server) o plataformas interactivas como CodePen y
+                JSFiddle. </li>
+        </ul>
+        <p>Estos entornos permiten probar y ajustar las animaciones en tiempo real, optimizando su comportamiento visual
+            y de rendimiento. </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Diseño e Implementación de Páginas Web</h3>
+                <p><strong>Exposición:</strong> Animaciones Web con CSS y JavaScript</p>
+                <p><strong>Presentado por:</strong> <br> Keylin Rojas Obando <br> Nancy Yuliana Araya Norori <br> Axel
+                    Alejandro Orozco Guzmán <br> Mónica Pamela Gutiérrez Borge</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Referencias</h4>
+                <ul>
+                    <li><a href="https://profile.es/blog/los-10-principios-de-usabilidad-web-de-jakob-nielsen/"
+                            target="_blank">PROFILE</a></li>
+                    <li><a href="https://www.unir.net/revista/marketing-comunicacion/que-es-usabilidad-web/"
+                            target="_blank">UNIR</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 | Proyecto académico - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- GSAP  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            try {
+                // animate section headings
+                gsap.from('#seccion-ventajas h2, #seccion-libreria h2, #seccion-configuracion h2', {
+                    y: 26,
+                    opacity: 0,
+                    duration: 0.85,
+                    ease: 'power3.out',
+                    stagger: 0.12
+                });
+
+                // animate paragraphs with a slight overlap
+                gsap.from('#seccion-ventajas p, #seccion-libreria p, #seccion-configuracion p', {
+                    y: 12,
+                    opacity: 0,
+                    duration: 0.7,
+                    ease: 'power2.out',
+                    stagger: 0.08,
+                    delay: 0.12
+                });
+
+                // subtle scale-in for code examples
+                gsap.from('pre.ejemplo-cod', { scale: 0.985, opacity: 0, duration: 0.8, ease: 'power2.out', stagger: 0.14, delay: 0.18 });
+            } catch (e) {
+                // graceful fallback if GSAP is blocked
+                console.warn('GSAP init error:', e);
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
