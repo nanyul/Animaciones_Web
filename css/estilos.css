@@ -792,13 +792,38 @@ header .logo span {
         width: 400px;
         height: 400px;
     }
+
+    .cta{
+        height: 70vh;
+    }
 }
 
 @media (max-width: 640px) {
-
     #robot {
         width: 200px;
         height: 200px;
+    }
+
+    .hero-section {
+        height: 50vh;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .triangulo {
+        display: none;
+    }
+
+    .rueda {
+        display: none;
+    }
+
+    .cta{
+        height: 40vh;
     }
 }
 

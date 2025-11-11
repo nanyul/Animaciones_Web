@@ -41,7 +41,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                 },
                 y: "200%",
-                x: "-55%",
+                x: "-65%",
+                ease: "power1.inOut",
+                immediateRender: false,
+            });
+        },
+
+        // Mobile
+        "(max-width: 640px)": function () {
+            const robot = document.querySelector("#robot");
+            const imageHeight = robot.offsetHeight;
+            gsap.to("#robot", {
+                scrollTrigger: {
+                    trigger: "#seccion2",
+                    start: "top bottom",
+                    end: "bottom bottom",
+                    scrub: 1,
+
+                },
+                y: "1%",
+                x: "1%",
                 ease: "power1.inOut",
                 immediateRender: false,
             });
@@ -73,7 +92,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     end: "center center",
                     scrub: 1,
                 },
-                y: "420%",
+                y: "375%",
                 x: "37%",
                 ease: "power1.inOut",
                 immediateRender: false,
@@ -107,7 +126,36 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 ease: "power1.inOut",
                 immediateRender: false,
             });
-        }
+        },
+
+        // Mobile
+        "(max-width: 640px)": function () {
+            gsap.to("#robot", {
+                scrollTrigger: {
+                    trigger: "#seccion3",
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: 1,
+                },
+                y: "700%",
+                x: "3%",
+                ease: "power1.inOut",
+                immediateRender: false,
+            });
+
+            gsap.to("#robot", {
+                scrollTrigger: {
+                    trigger: "#seccion5",
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: 1,
+                },
+                y: "1650%",
+                x: "-70%",
+                ease: "power1.inOut",
+                immediateRender: false,
+            });
+        },
     });
 
 });
