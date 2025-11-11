@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación UI - CyberAnimation</title>
+    
+    <link rel="stylesheet" href="CSS/estiloss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="principios">
+    <!-- Header -->
+    <header>
+        <div class="logo">Cyber<span>Animation</span></div>
+        <ul class="menu">
+            <li><a href="fundamentos.html">Fundamentos</a></li>
+            <li><a href="animacionui.html" class="btn">Animación UI</a></li>
+            <li><a href="animadocss.html">CSS Animado</a></li>
+            <li><a href="jsanimado.css">JS Animado</a></li>
+        </ul>
+    </header>
+
+    <section class="principios-section" id="animacion-ui">
+        <div class="container">
+            <div class="demo-section">
+                <h2>¿Qué son las Micro-interacciones?</h2>
+                <p>Las micro-interacciones son pequeñas respuestas visuales que ocurren cuando el usuario realiza una
+                    acción: presionar un botón, enviar un formulario o recibir una notificación. Aunque breves, aportan
+                    vida, feedback y placer a la interfaz.</p>
+
+                <div class="demo-box micro-btn"
+                    style="width:120px; height:60px; text-align:center; line-height:60px; font-weight:600; background:linear-gradient(90deg,#E75C84,#FBB040); cursor:pointer;">
+                    ¡Haz clic!
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Principios de Animación de Disney aplicados a UI</h2>
+                <p>Estos principios ayudan a crear transiciones naturales, expresivas y fluidas dentro de una interfaz.
+                </p>
+
+                <div class="principios-grid">
+                    <div class="demo-card">
+                        <h3>1. Aplastar y Estirar</h3>
+                        <p><strong>Definición:</strong> Exagerar cambios de forma para transmitir peso y
+                            flexibilidad.<br>
+                            <strong>Ejemplo:</strong> Un botón que se estira al hacer clic, mostrando reacción.
+                        </p>
+                        <div class="demo-circle squash"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>2. Anticipación</h3>
+                        <p><strong>Definición:</strong> Preparar al usuario para la próxima acción o animación.<br>
+                            <strong>Ejemplo:</strong> Una tarjeta se reduce antes de expandirse.
+                        </p>
+                        <div class="demo-circle anticipacion"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>3. Puesta en Escena</h3>
+                        <p><strong>Definición:</strong> Destacar lo importante usando tiempo, posición y animación.<br>
+                            <strong>Ejemplo:</strong> Mostrar una notificación con fade-in en un lugar estratégico.
+                        </p>
+                        <div class="demo-circle escena"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>4. Acción Directa y Posturas</h3>
+                        <p><strong>Definición:</strong> Crear movimientos fluidos y bien definidos.<br>
+                            <strong>Ejemplo:</strong> Transición entre pantallas con etapas claras.
+                        </p>
+                        <div class="demo-circle accion"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>5. Seguimiento y Acción Superpuesta</h3>
+                        <p><strong>Definición:</strong> Añadir movimiento secundario tras el principal.<br>
+                            <strong>Ejemplo:</strong> Un menú desplegable cuyo fondo se abre ligeramente después.
+                        </p>
+                        <div class="demo-circle seguimiento"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>6. Despacio al Entrar y Salir</h3>
+                        <p><strong>Definición:</strong> Iniciar y terminar las animaciones suavemente (easing).<br>
+                            <strong>Ejemplo:</strong> Un fade-in que acelera al centro y se desacelera al final.
+                        </p>
+                        <div class="demo-circle easing"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>7. Arcos</h3>
+                        <p><strong>Definición:</strong> Crear movimientos curvos y naturales.<br>
+                            <strong>Ejemplo:</strong> Elementos que se desplazan en curva, no en línea recta.
+                        </p>
+                        <div class="demo-circle arcos"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>8. Acción Secundaria</h3>
+                        <p><strong>Definición:</strong> Agregar detalles animados que refuercen la acción principal.<br>
+                            <strong>Ejemplo:</strong> Un icono que gira mientras el botón se expande.
+                        </p>
+                        <div class="demo-circle secundaria"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>9. Tiempo</h3>
+                        <p><strong>Definición:</strong> Controlar la velocidad para transmitir intención.<br>
+                            <strong>Ejemplo:</strong> Un mensaje de éxito que aparece y desaparece con timing preciso.
+                        </p>
+                        <div class="demo-circle tiempo"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>10. Exageración</h3>
+                        <p><strong>Definición:</strong> Aumentar la expresividad y dramatismo de una animación.<br>
+                            <strong>Ejemplo:</strong> Ampliar la animación de error en un formulario.
+                        </p>
+                        <div class="demo-circle exageracion"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>11. Dibujo Sólido</h3>
+                        <p><strong>Definición:</strong> Mantener animaciones consistentes y estructuradas.<br>
+                            <strong>Ejemplo:</strong> Botones bien delineados y transiciones precisas.
+                        </p>
+                        <div class="demo-circle solido"></div>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>12. Atractivo</h3>
+                        <p><strong>Definición:</strong> Lograr que la animación sea amigable y visualmente
+                            agradable.<br>
+                            <strong>Ejemplo:</strong> Animaciones pulidas y con personalidad.
+                        </p>
+                        <div class="demo-circle atractivo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>🎮 Ejemplo de Micro-interacción Completa</h2>
+                <p>Un botón que reacciona, genera una partícula y confirma visualmente la acción.</p>
+                <div class="interaccion-completa">
+                    <button id="like-btn">❤️ Me gusta</button>
+                    <div id="sparkle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Robot flotante -->
+    <div id="robot">
+        <div class="antenna"></div>
+        <div class="head">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+        </div>
+        <div class="body"></div>
+    </div>
+
+    <script src="js/animaciones.js"></script>
+</body>
+</html>

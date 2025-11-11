@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - CyberAnimation</title>
+    <link rel="stylesheet" href="CSS/estiloss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="fundamentos">
+    <!-- Header -->
+    <header>
+        <div class="logo"> Cyber<span>Animation</span> </div>
+        <ul class="menu">
+            <li><a href="fundamentos.html" class="btn">Fundamentos</a></li>
+            <li><a href="animacionui.html">Animación UI</a></li>
+            <li><a href="animadocss.html">CSS Animado</a></li>
+            <li><a href="jsanimado.html">JS Animado</a></li>
+        </ul>
+    </header>
+
+    <section class="fundamentos" id="fundamentos">
+        <div class="container">
+
+            <!--Introducción -->
+            <div class="demo-section">
+                <h2>¿Qué son las Animaciones Web?</h2>
+                <p>
+                    Las animaciones web son transformaciones progresivas aplicadas a los elementos de una página HTML,
+                    mediante cambios controlados en propiedades visuales tales como posición, opacidad, color o tamaño.
+                    Su propósito principal es mejorar la interacción y comunicación visual entre el sistema y el
+                    usuario.
+                </p>
+                <p>
+                    En esencia, una animación web otorga vida a los componentes de una interfaz, haciendo que las
+                    transiciones, los cambios de estado y las respuestas a acciones sean más comprensibles y atractivas.
+                </p>
+            </div>
+
+            <!--Ejemplo práctico -->
+            <div class="demo-section">
+                <h2>Ejemplo práctico en CSS</h2>
+                <pre><code>
+div {
+  animation: mover 2s ease-in-out infinite;
+}
+@keyframes mover {
+  from { transform: translateX(0); }
+  to { transform: translateX(100px); }
+}
+            </code></pre>
+            </div>
+
+            <!--Principios -->
+            <div class="demo-section">
+                <h2>Principios de Animación</h2>
+
+                <!-- Principio Easing -->
+                <div class="sub-section">
+                    <h3>Easing (Suavizado)</h3>
+                    <p>
+                        Controla la velocidad del movimiento a lo largo del tiempo, simulando aceleraciones o
+                        desaceleraciones naturales. Ejemplo: ease, linear, ease-in, ease-out.
+                    </p>
+
+                    <!-- Subcaja Preajustes -->
+                    <div class="demo-subsection">
+                        <h4>🎚️ Preajustes de Easing Predeterminados</h4>
+                        <p>
+                            Los preajustes de <strong>easing</strong> determinan la forma en que una animación acelera o
+                            desacelera a lo largo del tiempo. A continuación se describen los más comunes:
+                        </p>
+                        <ul>
+                            <li><strong>Linear:</strong> velocidad constante.</li>
+                            <li><strong>Ease:</strong> suave y natural.</li>
+                            <li><strong>Ease-out:</strong> rápido al inicio, frenado al final.</li>
+                            <li><strong>Ease-in:</strong> lento al inicio, rápido al final.</li>
+                            <li><strong>Ease-in-out:</strong> lento al inicio y final, rápido en el centro.</li>
+                            <li><strong>Step-end:</strong> salta al final tras el tiempo.</li>
+                            <li><strong>Step-start:</strong> salta al final desde el inicio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Principio Duration -->
+                <div class="sub-section">
+                    <h3>Duration (Duración)</h3>
+                    <p>Define el tiempo total que dura la animación, expresado en segundos (s) o milisegundos (ms).</p>
+                </div>
+
+                <!-- Principio Delay -->
+                <div class="sub-section">
+                    <h3>Delay (Retraso)</h3>
+                    <p>
+                        Especifica el tiempo que transcurre antes de que comience la animación. Un valor positivo
+                        retrasa el inicio; uno negativo hace que comience avanzada.
+                    </p>
+                </div>
+            </div>
+
+            <!-- DEMOSTRACIONES VISUALES -->
+            <div class="demo-section">
+                <h2>🕒 Ejemplo de Duration</h2>
+                <p>Entre más largo el <code>duration</code>, más lenta será la animación. Aquí, las cajas se mueven con diferentes duraciones.</p>
+                <div id="duration-demo">
+                    <div class="demo-box" style="background: linear-gradient(90deg, #E75C84, #FBB040);"></div>
+                    <div class="demo-box" style="background: linear-gradient(90deg, #8C144E, #EE9029);"></div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>⏱️ Ejemplo de Delay</h2>
+                <p>El <code>delay</code> retrasa el inicio de una animación. Cada caja empieza con un tiempo diferente.
+                </p>
+                <div id="delay-demo">
+                    <div class="demo-box"></div>
+                    <div class="demo-box"></div>
+                    <div class="demo-box"></div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>🎢 Ejemplo de Easing</h2>
+                <p>El <code>easing</code> cambia la forma en que se mueve un objeto: algunas aceleran, otras frenan
+                    suavemente.</p>
+                <div id="easing-demo">
+                    <div class="demo-box" style="background: linear-gradient(90deg, #E75C84, #EE9029);"></div>
+                    <div class="demo-box" style="background: linear-gradient(90deg, #FBB040, #8C144E);"></div>
+                    <div class="demo-box" style="background: linear-gradient(90deg, #EE9029, #FBB040);"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!--  Robot flotante -->
+    <div id="robot">
+        <div class="antenna"></div>
+        <div class="head">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+        </div>
+        <div class="body"></div>
+    </div>
+
+    <!-- Animaciones GSAP -->
+<script src="js/animaciones.js"></script>
+</body>
+
+</html>
