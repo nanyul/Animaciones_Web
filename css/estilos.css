@@ -769,3 +769,38 @@ header .logo span {
     }
 }
 
+@media (max-width: 1024px) {
+    .transiciones-seccion .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .transiciones-seccion .left,
+    .transiciones-seccion .right {
+        grid-column: auto;
+    }
+
+    .transiciones-seccion::before {
+        display: none;
+    }
+
+    .robot-slot {
+        grid-column: auto;
+        margin-top: 1rem;
+    }
+
+    #robot {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    #robot {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+
